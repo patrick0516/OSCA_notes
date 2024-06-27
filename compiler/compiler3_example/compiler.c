@@ -12,10 +12,10 @@ int tempIdx = 0, labelIdx = 0;
 #define nextLabel() (labelIdx++)
 #define emit printf
 
-int isNext(char *set) {
-  char eset[SMAX], etoken[SMAX];
-  sprintf(eset, " %s ", set);
-  sprintf(etoken, " %s ", tokens[tokenIdx]);
+int isNext(char *set) {                                                   // 定義一個 string array
+  char eset[SMAX], etoken[SMAX];                                          // 給定兩個 array 
+  sprintf(eset, " %s ", set);                                             // eset = set 並 print 出
+  sprintf(etoken, " %s ", tokens[tokenIdx]);                              // etoken = tokens
   return (tokenIdx < tokenTop && strstr(eset, etoken) != NULL);
 }
 
